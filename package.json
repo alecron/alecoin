@@ -1,0 +1,25 @@
+{
+  "name": "alecoin",
+  "version": "1.0.0",
+  "description": "Naivecoin implementation to learn about building a cryptocurrency",
+  "main": "src/main.ts",
+  "scripts": {
+    "prestart": "npm run compile",
+    "test": "node test.js",
+    "start": "node src/main.js",
+    "compile": "tsc"
+  },
+  "author": "alecron",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/crypto-js": "^4.2.2",
+    "@types/express": "^4.17.21",
+    "@types/ws": "^8.5.12",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "crypto-js": "^4.2.0",
+    "express": "^4.19.2",
+    "ws": "^8.18.0"
+  }
+}

@@ -2,9 +2,10 @@ import express from 'express';
 import bodyParser from 'body-parser';
 
 import { Block, generateNextBlock, getBlockchain } from './blockchain';
-import { connectToPeers, getSockets } from './p2p';
+import { connectToPeers, getSockets, initP2PServer } from './p2p';
 
 const http_port = parseInt(process.env.HTTP_PORT || '3001');
+const p2p_port = parseInt(process.env.P2P_PORT || '6001');
 
 // Build a basic HTTP server to interact with the blockchain's
 // node.
@@ -33,3 +34,4 @@ const initHttpServer = (myHttpPort: number) => {
 };
 
 initHttpServer(http_port);
+initP2PServer(p2p_port);
